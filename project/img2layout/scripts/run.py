@@ -6,7 +6,8 @@ import os
 import sys
 import os.path as osp
 
-sys.path.append(osp.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', '..'))
+sys.path.append(osp.join(os.path.dirname(
+    os.path.abspath(__file__)), '..', '..', '..'))
 from pdf_extract_kit.utils.config_loader import (load_config,
                                                  initialize_tasks_and_models)
 from pdf_extract_kit.registry.registry import TASK_REGISTRY

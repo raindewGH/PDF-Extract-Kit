@@ -5,6 +5,7 @@
 import os
 import sys
 import os.path as osp
+from img2layout import Img2Layout
 
 sys.path.append(osp.join(os.path.dirname(
     os.path.abspath(__file__)), '..', '..', '..'))

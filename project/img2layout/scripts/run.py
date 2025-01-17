@@ -5,7 +5,7 @@
 import os
 import sys
 import os.path as osp
-from img2layout import Img2Layout
+from img2layout import Img2Layout  # 加载模型
 
 sys.path.append(osp.join(os.path.dirname(
     os.path.abspath(__file__)), '..', '..', '..'))
@@ -39,7 +39,8 @@ def demo_img():
 
 
 if __name__ == '__main__':
-    config_path = os.path.abspath("../configs/img2layout.yaml")
+    config_path = os.path.join(
+        os.path.dirname(__file__), '../configs/img2layout.yaml')
     img = demo_img()
 
     main(img, config_path=config_path)

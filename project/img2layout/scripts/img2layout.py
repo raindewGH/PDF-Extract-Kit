@@ -10,11 +10,12 @@ import torch
 
 sys.path.append(osp.join(os.path.dirname(
     os.path.abspath(__file__)), '..', '..', '..'))
+from pdf_extract_kit.tasks.base_task import BaseTask
 from pdf_extract_kit.registry.registry import TASK_REGISTRY
 
 
 @TASK_REGISTRY.register('img2layout')
-class Img2Layout:
+class Img2Layout(BaseTask):
     def __init__(self, layout_model):
         self.layout_model = layout_model
 

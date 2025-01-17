@@ -39,7 +39,7 @@ def demo_img():
 
 
 if __name__ == '__main__':
-    config_path = '../configs/img2layout.yaml'
+    config_path = os.path.abspath("../configs/img2layout.yaml")
     img = demo_img()
 
     main(img, config_path=config_path)
